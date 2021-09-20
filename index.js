@@ -2,6 +2,9 @@ const express=require("express");
 const app=express();
 const port=process.env.PORT || 8000;
 
+const passport=require('passport');
+const passportJWT=require('./config/passport-jwt-strategy');
+
 const db=require("./config/mongoose");
 
 app.use(express.urlencoded());
