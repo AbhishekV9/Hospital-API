@@ -1,23 +1,23 @@
 const mongoose=require("mongoose");
 
 const reportSchema=new mongoose.Schema({
-    DoctorName:{
+    doctorName:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Doctor",
         required:true
     },
-    PatientId:{
+    patientId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Patient",
         required:true
     },
-    Status:{
+    status:{
         type:String,
         enum:['Negative', 'Travelled-Quarantine', 'Symptoms-Quarantine',
             'Positive-Admit'],
         required:true
     },
-    Date:{
+    date:{
         type:Date,
         default:new Date()
     }

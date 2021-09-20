@@ -2,11 +2,11 @@
 const mongoose=require("mongoose");
 
 const doctorSchema= new mongoose.Schema({
-    Name:{
+    name:{
         type:String,
         required:true
     },
-    Email:{
+    email:{
         type:String,
         unique:true,
         required:true

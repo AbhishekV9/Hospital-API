@@ -1,21 +1,21 @@
 const mongoose=require("mongoose");
 
 const patientSchema=new mongoose.Schema({
-    Name:{
+    name:{
         type:String,
         required:true
     },
-    Sex:{
+    sex:{
         type:String,
         required:true
     },
-    PhoneNumber:{
+    phoneNumber:{
         type:Number,
         required:true,
         min:1000000000,
         max:9999999999
     },
-    Repots:[
+    repots:[
         {
             type:mongoose.Schema.Types.ObjectId,
             ref:"Report"
