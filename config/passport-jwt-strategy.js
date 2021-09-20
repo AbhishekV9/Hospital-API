@@ -6,7 +6,7 @@ const Doctor=require('../models/doctors');
 
 let opts={
     jwtFromRequest:ExtractJWT.fromAuthHeaderAsBearerToken(),
-    secretOrKey:'Hospital'
+    secretOrKey:'Abhishek99HospitalAPI'
 }
 
 passport.use(new jWTStrategy(opts,function(jwt_payload,done){
