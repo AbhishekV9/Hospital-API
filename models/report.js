@@ -4,10 +4,12 @@ const reportSchema=new mongoose.Schema({
     doctorName:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Doctor",
+        required:true
     },
     patientId:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Patient",
+        required:true
     },
     status:{
         type:String,
