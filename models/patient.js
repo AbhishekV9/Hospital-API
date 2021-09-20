@@ -12,6 +12,7 @@ const patientSchema=new mongoose.Schema({
     phoneNumber:{
         type:Number,
         required:true,
+        unique:true,
         min:1000000000,
         max:9999999999
     },
