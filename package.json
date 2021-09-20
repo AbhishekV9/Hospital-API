@@ -4,11 +4,13 @@
   "description": "An API for the doctors of the Hospital which has benn allocated by the govt for testing and quarantine + well being of COVID-19 patients.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Abhishek Verma",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.0.6"
   }
 }
