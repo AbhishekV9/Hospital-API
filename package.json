@@ -1,0 +1,11 @@
+{
+  "name": "hospital-api",
+  "version": "1.0.0",
+  "description": "An API for the doctors of the Hospital which has benn allocated by the govt for testing and quarantine + well being of COVID-19 patients.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Verma",
+  "license": "ISC"
+}
