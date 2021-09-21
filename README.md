@@ -38,7 +38,11 @@ The server side for a hospital(Only The API). An API for the doctors of a Hospit
 </ul>
 
 ### Screenshot: ######
-
+</br>
+</br>
+<img src="https://github.com/AbhishekV9/Hospital-API/blob/master/screenshots/HospitalSS.png" />
+</br>
+</br>
 
 ### Technologies Stack: ######
 <ul>
@@ -46,7 +50,7 @@ The server side for a hospital(Only The API). An API for the doctors of a Hospit
   <li><a href="https://nodejs.org/en//">node.js </a>- evented I/O for the backend </li>
   <li><a href="https://expressjs.com/">Express </a>- fast web framework for node.js </li>
   <li><a href="https://www.mongodb.com/">mongoDB </a>- the database for modern applications </li>
-  <li><a href="http://www.passportjs.org/packages/passport-jwt/">JWT </a>- For Authentication purpose </li>
+  <li><a href="http://www.passportjs.org/">Passport </a>- For Authentication purpose </li>
   <li>etc </li>
 </ul>
 
