@@ -16,7 +16,7 @@ module.exports.reports=async function(req,res){
             });
         }
         let reports=await Report.find({status:req.params.status});
-        if(!reports){
+        if(reports.length===0){
             return res.json('401',{
                 message:"Report with given status does not exist"
             });

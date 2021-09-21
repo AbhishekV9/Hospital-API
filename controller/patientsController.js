@@ -15,6 +15,11 @@ module.exports.registerPatient=async function(req,res){
                 message:"Doctor dosen't Exist"
             });
         }
+        if(req.body.phoneNumber<1000000000 || req.body.phoneNumber>9999999999 ){
+            return res.json(422,{
+                message:"Invalid Phone Number"
+            })
+        }
         let patient=await Patient.findOne({phoneNumber:req.body.phoneNumber});
         if(patient){
             return res.json(200,{
@@ -91,6 +96,11 @@ module.exports.allReports=async function(req,res){
             });
         }
         const reports=await Report.find({patientId:req.params.id}).sort({date:-1})
+        if(reports.length===0){
+            return res.json('401',{
+                message:`No Reports for ${patient.name} is present in Database`
+            });
+        }
         return res.json(200,{
             message:`List of all ${patient.name} reports are:` ,
             reports
