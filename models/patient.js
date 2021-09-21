@@ -7,6 +7,7 @@ const patientSchema=new mongoose.Schema({
     },
     sex:{
         type:String,
+        enum:['Male','Female','Other'],
         required:true
     },
     phoneNumber:{
@@ -16,13 +17,6 @@ const patientSchema=new mongoose.Schema({
         min:1000000000,
         max:9999999999
     },
-    repots:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"Report"
-        }
-    ]
-
 },{
     timestamps:true
 });

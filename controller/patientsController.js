@@ -28,6 +28,7 @@ module.exports.registerPatient=async function(req,res){
             patient
         });
     } catch (error) {
+        console.log(error);
         return res.json(500,{
             message:'Internal Server Error'
         });
@@ -53,16 +54,18 @@ module.exports.createReport=async function(req,res){
         }
         let report= await Report.create({
             doctorName:doctor.name,
+            patientName:patient.name,
+            doctorId:doctor._id,
             patientId:patient._id,
+            sex:patient.sex,
             status:req.body.status,
         })
-        patient.repots.push(report);
-        patient.save();
         return res.json(200,{
             message:`${patient.name} Report is ready:-Watch It`,
             report
         })
     } catch (error) {
+        console.log(error)
         return res.json(500,{
             message:'Internal Server Error'
         });
@@ -87,12 +90,13 @@ module.exports.allReports=async function(req,res){
                 message:'Patient needs to register first as this Patient does not exist',
             });
         }
-        const reportArrays=patient.repots.sort({date:-1});
+        const reports=await Report.find({patientId:req.params.id}).sort({date:-1})
         return res.json(200,{
             message:`List of all ${patient.name} reports are:` ,
-            reportArrays
+            reports
         })
     } catch (error) {
+        console.log(error);
         return res.json(500,{
             message:'Internal Server Error'
         });

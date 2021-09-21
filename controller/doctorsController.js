@@ -1,5 +1,7 @@
-const Doctor=require('../models/doctors');
 const jwt=require('jsonwebtoken');
+
+const Doctor=require('../models/doctors');
+
 
 module.exports.registerDoctor=async function(req,res){
     try{
@@ -25,6 +27,7 @@ module.exports.registerDoctor=async function(req,res){
             });
         });
     }catch(err){
+        console.log(err);
         return res.json(500,{
             message:'Internal Server Error'
         });
