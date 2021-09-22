@@ -27,12 +27,12 @@ The server side for a hospital(Only The API). An API for the doctors of a Hospit
   </li>
    <li>Required Routes
         <ol>
-        <li>/doctors/register → with username and password.</li>
-        <li>/doctors/login → returns the JWT to be used.</li>
-        <li>/patients/register → with phoneNumber and JWT.(wich you get after doctor's login)</li>
-        <li>/patients/:id/create_report → with status, patient's id and JWT (wich you get after doctor's login). </li>
-        <li>/patients/:id/all_reports → with patient's id and JWT (wich you get after doctor's login). This list all the reports of a patient oldest to latest.</li>
-        <li>/reports/:status → with status and JWT (wich you get after doctor's login). This list all the reports of all the patients filtered by a specific status.</li>
+        <li>/doctors/register → with name,email and password.(Http method:- POST)</li>
+        <li>/doctors/login → with email and password and it returns the JWT to be used.(Http method:- GET)</li>
+        <li>/patients/register → with name,sex,phoneNumber and JWT (wich you get after doctor's login). (Http method:- POST)</li>
+        <li>/patients/:id/create_report → with status, patient's id and JWT (wich you get after doctor's login). (Http method:- POST) </li>
+        <li>/patients/:id/all_reports → with patient's id and JWT (wich you get after doctor's login).This list all the reports of a patient oldest to latest. (Http method:- GET).</li>
+        <li>/reports/:status → with status and JWT (wich you get after doctor's login). This list all the reports of all the patients filtered by a specific status. (Http method:- GET).</li>
         </ol>
   </li>
 </ul>
