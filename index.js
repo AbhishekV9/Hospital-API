@@ -2,6 +2,7 @@
 const express=require("express");
 const app=express();
 const port=process.env.PORT || 8000;
+const cors=require("cors");
 
 //Used passport for authentication purpose and the strategy use is JWT strategy
 const passport=require('passport');
@@ -12,6 +13,7 @@ const db=require("./config/mongoose");
 
 //to parse form data
 app.use(express.urlencoded());
+app.use(cors());
 
 //routes folder
 app.use('/',require("./routes"));
