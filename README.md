@@ -1,4 +1,4 @@
-# Habit_Tracker
+# Hospital_API
  
  ### Description: ######
 The server side for a hospital(Only The API). An API for the doctors of a Hospital for testing and quarantine + well being of COVID-19 patients
