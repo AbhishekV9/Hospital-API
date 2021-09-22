@@ -8,7 +8,7 @@ module.exports.registerDoctor=async function(req,res){
     try{
         let email=req.body.email;
         //finding the doctor on the basis of email
-        const doctor= await Doctor.findOne({email:email})
+        let doctor= await Doctor.findOne({email:email})
         //checking if the doctor already exists
         if(doctor){
             return res.json(200,{
@@ -17,7 +17,7 @@ module.exports.registerDoctor=async function(req,res){
             });
         }
         //if doctor does not exists then creating one
-        let doctor=await Doctor.create(req.body)
+        doctor=await Doctor.create(req.body)
         //returning the response with the doctor created    
         return res.json(200,{
             message:"Doctor registered Successfully",

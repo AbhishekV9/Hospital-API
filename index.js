@@ -12,7 +12,7 @@ const passportJWT=require('./config/passport-jwt-strategy');
 const db=require("./config/mongoose");
 
 //to parse form data
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //routes folder
